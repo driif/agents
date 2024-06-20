@@ -1,0 +1,12 @@
+name: Publish livekit-agents
+
+on:
+  workflow_dispatch
+
+jobs:
+  call-publish-workflow:
+    uses: ./.github/workflows/publish-package.yml
+    with:
+      package_name: 'livekit-agents'
+      package_module: 'livekit.agents'
+    secrets: inherit
